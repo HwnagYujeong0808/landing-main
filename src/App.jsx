@@ -37,7 +37,7 @@ function App() {
       {/* 🔹 Hero Section */}
       <section className="hero">
         <p className="tag">● 새로운 부업의 시작</p>
-        <h1>지금용 파트너스</h1>
+        <h1>지금융 파트너스</h1>
         <p className="subtitle">
           내가 관리하는 보험이 <span>내가 만드는 수익</span>이 됩니다.
         </p>
