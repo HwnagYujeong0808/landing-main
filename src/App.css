@@ -150,7 +150,7 @@ section {
   background: #0057ff;
   color: white;
   padding: 8px 24px;
-  margin-right: 60px;
+  margin-right: 0px;
 }
 
 .btn-large {
@@ -704,8 +704,7 @@ section {
 🔹 1:1 전문 멘토 섹션 (N잡 섹션과 통일)
 ===================================== */
 .mentor {
-  width: 100%;
-  max-width: 1400px;              /* ✅ njob과 동일한 중심선 */
+  width: 100%;              /* ✅ njob과 동일한 중심선 */
   margin: 0 auto;
   padding: clamp(60px, 8vw, 100px) 5%;
   box-sizing: border-box;
@@ -801,9 +800,10 @@ section {
   }
 
   .mentor-card {
-    padding: 60px 12px;
+    padding: 40px 12px;
     width: 90%;
     max-width: 500px;
+    max-height: 200px;
   }
 }
 
@@ -852,7 +852,7 @@ section {
   text-align: left;
   flex: 1 1 400px;
   transition: all 0.2s ease;
-  min-width: 300px;
+  min-width: 200px;
 }
 
 .cost-card:hover {
@@ -878,14 +878,16 @@ section {
 .cost-card .text h4 {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 6px;
+  /* margin-bottom: 6px; */
   color: #fff;
+  margin-top:-2px;
 }
 
 .cost-card .text p {
   font-size: 15px;
   color: rgba(255, 255, 255, 0.9);
   margin: 0;
+  margin-top: -15px;
 }
 
 /* 반응형 */
@@ -893,16 +895,25 @@ section {
   .cost-cards {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .cost-card {
     width: 90%;
+    padding: 0px 20px;
+    max-height: 150px;
+  }
+  .cost-card .text p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    width: auto;
   }
 
   .cost-card .icon {
     width: 40px;
     height: 40px;
     font-size: 22px;
+
   }
 }
 
@@ -916,6 +927,7 @@ section {
   margin: 0 auto;
   padding: clamp(80px, 8vw, 120px) 5%;
   text-align: center;
+  
   box-sizing: border-box;
 }
 
@@ -1021,7 +1033,7 @@ section {
   border-radius: 16px;
   padding: 20px 28px;
   flex: 1 1 420px;
-  min-width: 320px;
+  min-width: 200px;
   text-align: left;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
@@ -1066,22 +1078,52 @@ section {
   .plan-cards {
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    width: 100%;;
+ 
+    
   }
 
   .plan-card {
-    width: 100%;
+    width: 90%;
     max-width: 1000px;
   }
 
   .plan-bottom {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .bottom-card {
-    width: 90%;
-    max-width: 500px;
+    width: 100%;
+    flex: 1 1 100px;
+    max-width: 1000px;
+    padding: 0px 20px;
+    
+  }
+  .bottom-card .icon {
+    font-size: 24px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-right: 12px;
+  }
+
+
+  .bottom-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 4px;
+  }
+
+  .bottom-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
   }
 }
 
@@ -1121,7 +1163,7 @@ section {
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   padding: 28px 32px;
-  width: 100%;
+  width: 90%;
   max-width: 1100px;
   text-align: left;
   transition: all 0.2s ease;
