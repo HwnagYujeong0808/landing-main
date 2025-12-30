@@ -170,55 +170,55 @@ section {
 🔹 통계 카드 섹션
 ===================================== */
 .stats {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;               /* ✅ 화면 줄어들면 다음 줄로 감 */
+  gap: 28px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1200px;             
   margin: 0 auto;
   padding: clamp(60px, 8vw, 100px) 5%;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 24px;
+  flex-direction:row;
   text-align: center;
 }
 
+/* ✅ 카드: plan-card와 동일한 크기 비율 */
 .card {
+  display: flex;
+  flex: 1 1 30%;                 
+  min-width: 280px;              /* ✅ 화면 줄어들 때 기준 폭 */
+  max-width: 320px;              /* ✅ 너무 넓어지지 않게 */
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 0px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background: #fff;
-  border-radius: 16px;
-  padding: 32px 40px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
-  
-  flex: 0 1 calc(33.333% - 24px);  /* ✅ 한 줄에 3개 */
-  min-width: 240px;                /* ✅ 너무 작아지지 않게 */
-  box-sizing: border-box;
 }
 
 .card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
 }
 
-/* 카드 내부 타이틀 */
-.card h3 {
-  font-size: 26px;
-  font-weight: 700;
-  color: #111;
-  margin: 8px 0 6px 0;
-}
-
-/* 아이콘 */
+/* 카드 내부 텍스트 */
 .card .icon {
   font-size: 32px;
   margin-bottom: 10px;
 }
 
-/* 본문 텍스트 */
+.card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+  margin: 8px 0 6px;
+}
+
 .card p {
   font-size: 16px;
   color: #555;
@@ -271,15 +271,16 @@ section {
   }
 
   .stats {
-    flex-direction: column;
+    flex-direction: column;     
     align-items: center;
   }
 
   .card {
-    flex: 1 1 100%;
     width: 90%;
-    max-width: 500px;
+    max-width: 1000px;
+    padding: 32px 24px;
   }
+
 
   .floating-btn {
     right: 16px;
@@ -665,6 +666,7 @@ section {
   font-weight: 700;
   color: #111;
   margin-bottom: 4px;
+  margin-top:5px;
 }
 
 .point p {
@@ -732,6 +734,7 @@ section {
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
+  flex-direction: row;
   gap: 28px;
   width: 100%;
   max-width: 1000px;              /* ✅ 카드 최대 너비 njob과 동일 */
@@ -746,12 +749,12 @@ section {
   flex: 1 1 300px;
   background: #fff;
   border-radius: 16px;
-  padding: 40px 32px;
+  padding: 40px 60px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   min-width: 220px;
-  max-width: 320px;
+  max-width: 300px;
 }
 
 .mentor-card:hover {
