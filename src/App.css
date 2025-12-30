@@ -170,51 +170,59 @@ section {
 🔹 통계 카드 섹션
 ===================================== */
 .stats {
-  display: flex;
-  flex-direction: row; /* ✅ 카드 가로 정렬 */
-  justify-content: center; /* ✅ 가운데 정렬 */
-  align-items: stretch;
-  flex-wrap: wrap; /* ✅ 화면 줄어들면 다음 줄로 감 */
-  gap: 24px;
   width: 100%;
   max-width: 1200px;
-  margin: 0px auto;
+  margin: 0 auto;
+  padding: clamp(60px, 8vw, 100px) 5%;
   box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  text-align: center;
 }
 
 .card {
-  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #fff;
   border-radius: 16px;
-  padding: 28px 40px;
-  text-align: center;
-  margin: 0 auto;
+  padding: 32px 40px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
-  flex: 0 1 160px; /* 한 줄에 세 개씩 배치될 크기 */
-  min-width: 240px;
-  max-width: 320px;
+  
+  flex: 0 1 calc(33.333% - 24px);  /* ✅ 한 줄에 3개 */
+  min-width: 240px;                /* ✅ 너무 작아지지 않게 */
+  box-sizing: border-box;
 }
-/* 카드 내부 타이틀 (h3) 스타일 */
-.card h3 {
-  font-size: 26px;       /* 크기 크게 */
-  font-weight: 700;      /* 굵게 (Bold) */
-  color: #111;           /* 진한 색상 */
-  margin: 8px 0 6px 0;   /* 위아래 여백 조정 */
-}
-
-.card .icon {
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-.card p {
-  font-size: 16px;
-  color: #555;           /* ✅ 본문은 살짝 연한 회색 */
-  margin: 0;
-}
-
 
 .card:hover {
   transform: translateY(-4px);
+}
+
+/* 카드 내부 타이틀 */
+.card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+  margin: 8px 0 6px 0;
+}
+
+/* 아이콘 */
+.card .icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* 본문 텍스트 */
+.card p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
 }
 
 /* =====================================
@@ -263,13 +271,14 @@ section {
   }
 
   .stats {
-    flex-direction: column; /* ✅ 세로 정렬 */
+    flex-direction: column;
     align-items: center;
   }
 
   .card {
+    flex: 1 1 100%;
     width: 90%;
-    max-width: 1000px;
+    max-width: 500px;
   }
 
   .floating-btn {
@@ -690,16 +699,18 @@ section {
     padding: 16px;
   }
 }
+
 /* =====================================
-🔹 1:1 전문 멘토 섹션
+🔹 1:1 전문 멘토 섹션 (N잡 섹션과 통일)
 ===================================== */
 .mentor {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1400px;              /* ✅ njob과 동일한 중심선 */
   margin: 0 auto;
   padding: clamp(60px, 8vw, 100px) 5%;
   box-sizing: border-box;
   text-align: center;
+  background: #fff;
 }
 
 .mentor h2 {
@@ -724,25 +735,29 @@ section {
   flex-wrap: wrap;
   gap: 28px;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1000px;              /* ✅ 카드 최대 너비 njob과 동일 */
 }
 
 /* 개별 카드 */
 .mentor-card {
+  display: flex;
+  flex-direction: column;         /* ✅ 내용 세로 정렬 */
+  align-items: center;
+  justify-content: flex-start;
   flex: 1 1 300px;
   background: #fff;
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 40px 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease;
-  min-width: 260px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 220px;
+  max-width: 320px;
 }
 
 .mentor-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 36px rgba(0, 87, 255, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 87, 255, 0.1);
 }
 
 /* 아이콘 */
@@ -777,16 +792,18 @@ section {
 }
 
 /* 반응형 */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .mentor-cards {
     flex-direction: column;
     align-items: center;
+
+    
   }
 
   .mentor-card {
+    padding: 60px 12px;
     width: 90%;
     max-width: 500px;
-    max-height: 200px;
   }
 }
 

@@ -213,7 +213,9 @@ function App() {
 
       {/* 🔹 1:1 전문 멘토 섹션 */}
       <section className="mentor">
-        <h2>1:1 전문 멘토와 함께라면<br />어렵지 않아요</h2>
+        <h2>
+          1:1 전문 멘토와 함께라면<br />어렵지 않아요
+        </h2>
         <p className="subtitle">
           보험 용어 몰라도 OK! 전문 멘토가 모든 과정을 처음부터 끝까지 안내합니다.
         </p>
@@ -238,6 +240,7 @@ function App() {
           </div>
         </div>
       </section>
+
 
       {/* 🔹 초기비용 최소화 섹션 */}
       <section className="cost">
