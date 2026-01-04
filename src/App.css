@@ -178,7 +178,7 @@ section {
   width: 100%;
   max-width: 1200px;             
   margin: 0 auto;
-  padding: clamp(60px, 8vw, 100px) 5%;
+  padding: clamp(60px, 8vw, 80px) 5%;
   box-sizing: border-box;
   flex-direction:row;
   text-align: center;
@@ -224,6 +224,115 @@ section {
   color: #555;
   margin: 0;
 }
+
+.card .icon {
+  width: 72px;                    /* ✅ 아이콘 컨테이너 크기 */
+  height: 72px;
+  background: #eaf1ff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  overflow: hidden;               /* ✅ 이미지가 넘치지 않도록 */
+}
+
+.card .icon img {
+  width: 35px;                    /* ✅ 이미지 크기 (적당히 작게) */
+  height: 35px;
+  object-fit: contain;
+  display: block;
+
+}
+.point .icon {
+  width: 72px;                    /* ✅ 아이콘 컨테이너 크기 */
+  height: 72px;
+  background: #eaf1ff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  overflow: hidden;               /* ✅ 이미지가 넘치지 않도록 */
+}
+
+.point .icon img {
+  width: 30px;                    /* ✅ 이미지 크기 (적당히 작게) */
+  height: 30px;
+  object-fit: contain;
+  display: block;
+
+}
+.plan-card .icon {
+  width: 42px;                    /* ✅ 아이콘 컨테이너 크기 */
+  height: 42px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  overflow: hidden;               /* ✅ 이미지가 넘치지 않도록 */
+}
+
+.plan-card .icon img {
+  width: 40px;                    /* ✅ 이미지 크기 (적당히 작게) */
+  height: 40px;
+  object-fit: contain;
+  display: block;
+
+}
+
+.bottom-card .icon-green {
+  width: 62px;                    /* ✅ 아이콘 컨테이너 크기 */
+  height: 62px;
+  background: #DCFCE7;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  overflow: hidden;               /* ✅ 이미지가 넘치지 않도록 */
+}
+
+.bottom-card .icon-blue {
+  width: 62px;                    /* ✅ 아이콘 컨테이너 크기 */
+  height: 62px;
+  background: #eaf1ff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  overflow: hidden;               /* ✅ 이미지가 넘치지 않도록 */
+}
+
+.card-content img {
+  width: 30px;                    /* ✅ 이미지 크기 (적당히 작게) */
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+.card-content .icon-area {
+  width: 72px;                    /* ✅ 아이콘 컨테이너 크기 */
+  height: 72px;
+  background: #eaf1ff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  overflow: hidden;               /* ✅ 이미지가 넘치지 않도록 */
+}
+
+.bottom-card img {
+  width: 30px;                    /* ✅ 이미지 크기 (적당히 작게) */
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+
 
 /* =====================================
 🔹 Floating Button
@@ -480,12 +589,7 @@ section {
   align-items: flex-start;
 }
 
-.icon-area {
-  flex: 0 0 48px;
-  font-size: 32px;
-  text-align: center;
-  margin-top: 4px;
-}
+
 
 .text-area {
   flex: 1;
@@ -777,10 +881,17 @@ section {
   align-items: center;
   justify-content: center;
   border-radius: 16px;
-  width: 60px;
-  height: 60px;
+  width: 72px;
+  height: 72px;
   margin-bottom: 20px;
 }
+.mentor-card img {
+  width: 33px;                    /* ✅ 이미지 크기 (적당히 작게) */
+  height: 33px;
+  object-fit: contain;
+  display: block;
+}
+
 
 /* 제목 */
 .mentor-card h4 {
@@ -979,6 +1090,13 @@ section {
   min-width: 260px;
   max-width: 540px;
   border: 2px solid transparent;
+  
+  /* ✅ 추가 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .plan-card.active {
@@ -1059,20 +1177,14 @@ section {
   margin-right: 16px;
 }
 
-.bottom-card .icon.green {
-  background: #e6f9f0;
-  color: #00a36c;
-}
 
-.bottom-card .icon.blue {
-  background: #eaf1ff;
-  color: #0057ff;
-}
+
 
 .bottom-card h4 {
   font-size: 17px;
   font-weight: 700;
   color: #111;
+  margin-top: 1px;
   margin-bottom: 4px;
 }
 
@@ -1196,6 +1308,14 @@ section {
   height: 60px;
   margin-right: 24px;
   flex-shrink: 0;
+}
+
+.benefit-card img {
+  width: 30px;                    /* ✅ 이미지 크기 (적당히 작게) */
+  height: 30px;
+  object-fit: contain;
+  display: block;
+
 }
 
 /* 텍스트 영역 */

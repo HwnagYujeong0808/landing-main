@@ -1,5 +1,18 @@
 import { useState } from 'react'
 import './App.css'
+import icon1 from './assets/icons/icon1.png';
+import icon2 from './assets/icons/icon2.png';
+import icon3 from './assets/icons/icon3.png';
+import growth from './assets/icons/growth.png';
+import loss from './assets/icons/loss.png';
+import chat from './assets/icons/chat.png';
+import graduation from './assets/icons/graduation2.png';
+import heart from './assets/icons/heart.png';
+import wallet from './assets/icons/wallet.png';
+import users from './assets/icons/users.png';
+import clock from './assets/icons/clock.png';
+import check from './assets/icons/check.png';
+import close from './assets/icons/close.png';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -55,17 +68,17 @@ function App() {
       {/* 🔹 Stats Section */}
       <section className="stats">
         <div className="card">
-          <div className="icon">🛡️</div>
+          <div className="icon"><img src={icon1} alt="미수령 보험금" /></div>
           <h3>11.2조원</h3>
           <p>2024년 미수령 보험금</p>
         </div>
         <div className="card">
-          <div className="icon">📈</div>
+          <div className="icon"><img src={icon2} alt="예상 수익" /></div>
           <h3>평균 150만원</h3>
           <p>첫 달 예상 수익</p>
         </div>
         <div className="card">
-          <div className="icon">👥</div>
+          <div className="icon"><img src={icon3} alt="보험설계사 수" /></div>
           <h3>400,000+</h3>
           <p>대한민국 보험설계사 숫자</p>
         </div>
@@ -126,7 +139,7 @@ function App() {
           <div className="commission-card">
             <span className="label gray">기존 방식! 설계사에게 보험가입</span>
             <div className="card-content">
-              <div className="icon-area">❌</div>
+              <div className="icon-area"><img src={close} alt="수익0원" /></div>
               <div className="text-area">
                 <h4>설계사가 수수료를 가져감</h4>
                 <p>보험 가입 시 발생하는 수수료는 모두 설계사에게 돌아갑니다.</p>
@@ -141,7 +154,7 @@ function App() {
           <div className="commission-card active">
             <span className="label blue">지금융CS파트너스</span>
             <div className="card-content">
-              <div className="icon-area">✅</div>
+              <div className="icon-area"><img src={check} alt="내수익" /></div>
               <div className="text-area">
                 <h4>내가 설계사가 되어 수수료를 가져감</h4>
                 <p>내가 직접 설계사가 되어 수수료를 온전히 내 수익으로 만듭니다.</p>
@@ -185,7 +198,7 @@ function App() {
           {/* 오른쪽: 수익 포인트 */}
           <div className="income-right">
             <div className="point">
-              <span className="icon">📈</span>
+              <span className="icon"><img src={growth} alt="수익" /></span>
               <div>
                 <h4>최대 12배 수익 가능</h4>
                 <p>보험 계약 시 발생하는 수수료를 직접 수령합니다.</p>
@@ -193,7 +206,7 @@ function App() {
             </div>
 
             <div className="point">
-              <span className="icon">💰</span>
+              <span className="icon"><img src={growth} alt="수익" /></span>
               <div>
                 <h4>익월 27일 수수료, 익익월 10일 시책지급</h4>
                 <p>일반 설계사 수준에 근접한 수수료와 시책 지급</p>
@@ -201,7 +214,7 @@ function App() {
             </div>
 
             <div className="point">
-              <span className="icon">💎</span>
+              <span className="icon"><img src={growth} alt="수익" /></span>
               <div>
                 <h4>월 평균 150만원</h4>
                 <p>첫 달 평균 수익 150만원을 달성하고 있습니다.</p>
@@ -222,19 +235,19 @@ function App() {
 
         <div className="mentor-cards">
           <div className="mentor-card">
-            <div className="icon">💬</div>
+            <div className="icon"><img src={chat} alt="1:1맞춤상담" /></div>
             <h4>1:1 맞춤 상담</h4>
             <p>개인 상황에 맞는 맞춤형 상담으로 최적의 시작을 도와드립니다.</p>
           </div>
 
           <div className="mentor-card">
-            <div className="icon">🎓</div>
+            <div className="icon"><img src={graduation} alt="체계적인교육" style={{ width: '40px', height: '40px' }} /></div>
             <h4>체계적인 교육</h4>
             <p>처음이어도 걱정 없이 단계별 교육으로 전문가로 성장합니다.</p>
           </div>
 
           <div className="mentor-card">
-            <div className="icon">💙</div>
+            <div className="icon"><img src={heart} alt="지속적인서포트" /></div>
             <h4>지속적인 서포트</h4>
             <p>시작 후에도 꾸준한 멘토링으로 성공적인 활동을 지원합니다.</p>
           </div>
@@ -279,7 +292,7 @@ function App() {
         <div className="plan-cards">
           <div className="plan-card">
             <div className="badge">추천</div>
-            <div className="icon">🛡️</div>
+            <div className="icon"><img src={icon1} alt="보장" /></div>
             <h4>보장 1</h4>
             <p>필수 기본 보장</p>
             <h3>월 <span>56,000</span>원~</h3>
@@ -287,7 +300,7 @@ function App() {
 
           <div className="plan-card active">
             <div className="badge">인기</div>
-            <div className="icon">🛡️</div>
+            <div className="icon"><img src={icon1} alt="보장" /></div>
             <h4>보장 2</h4>
             <p>종합 보장 플랜</p>
             <h3>월 <span>72,000</span>원~</h3>
@@ -295,7 +308,7 @@ function App() {
 
           <div className="plan-card">
             <div className="badge">프리미엄</div>
-            <div className="icon">🛡️</div>
+            <div className="icon"><img src={icon1} alt="보장" /></div>
             <h4>보장 3</h4>
             <p>프리미엄 보장</p>
             <h3>월 <span>93,000</span>원~</h3>
@@ -304,14 +317,14 @@ function App() {
 
         <div className="plan-bottom">
           <div className="bottom-card">
-            <div className="icon green">💸</div>
+            <div className="icon-green"><img src={loss} alt="보험료 절약" /></div>
             <div>
               <h4>보험료 절약</h4>
               <p>불필요한 보장 제거로 평균 30% 절약</p>
             </div>
           </div>
           <div className="bottom-card">
-            <div className="icon blue">📈</div>
+            <div className="icon-blue"><img src={growth} alt="추가수익" /></div>
             <div>
               <h4>추가 수익</h4>
               <p>내가 설계한 보험의 수수료가 내 수익으로</p>
@@ -326,7 +339,7 @@ function App() {
 
         <div className="benefit-cards">
           <div className="benefit-card">
-            <div className="icon"> </div>
+            <div className="icon"><img src={wallet} alt="보험료 절약" /> </div>
             <div className="content">
               <div className="badge">혜택 1</div>
               <h4>나에게 맞는 보장 선택 → 보험료 절약</h4>
@@ -338,7 +351,7 @@ function App() {
           </div>
 
           <div className="benefit-card">
-            <div className="icon"> </div>
+            <div className="icon"><img src={users} alt="가족지인" /> </div>
             <div className="content">
               <div className="badge">혜택 2</div>
               <h4>가족·지인 보험 점검으로 추가 수익 창출</h4>
@@ -350,7 +363,7 @@ function App() {
           </div>
 
          <div className="benefit-card">
-            <div className="icon"> </div>
+            <div className="icon"><img src={clock} alt="시공간적자유" /> </div>
             <div className="content">
               <div className="badge">혜택 3</div>
               <h4>언제 어디서든 자유롭게</h4>
