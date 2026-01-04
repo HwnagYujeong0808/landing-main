@@ -18,7 +18,7 @@ function App() {
 
           {/* 가운데 브랜드명 */}
           <div className="nav-center">
-            <h1 className="brand">지금융 파트너스</h1>
+            <h1 className="brand">지금융CS파트너스</h1>
           </div>
 
           {/* 오른쪽 파란 버튼 */}
@@ -37,7 +37,7 @@ function App() {
       {/* 🔹 Hero Section */}
       <section className="hero">
         <p className="tag">● 새로운 부업의 시작</p>
-        <h1>지금융 파트너스</h1>
+        <h1>지금융CS파트너스</h1>
         <p className="subtitle">
           내가 관리하는 보험이 <span>내가 만드는 수익</span>이 됩니다.
         </p>
@@ -118,7 +118,7 @@ function App() {
       <section className="commission">
         <h2>수수료 구조의 변화</h2>
         <p className="subtitle">
-          지금융 파트너스는 ‘내가 직접 설계사가 되어 수수료를 가져가는 구조’입니다.
+          지금융CS파트너스는 ‘내가 직접 설계사가 되어 수수료를 가져가는 구조’입니다.
         </p>
 
         <div className="commission-container">
@@ -137,9 +137,9 @@ function App() {
             </div>
           </div>
 
-          {/* 지금융 파트너스 방식 */}
+          {/* 지금융CS파트너스 방식 */}
           <div className="commission-card active">
-            <span className="label blue">지금융 파트너스</span>
+            <span className="label blue">지금융CS파트너스</span>
             <div className="card-content">
               <div className="icon-area">✅</div>
               <div className="text-area">
@@ -175,7 +175,7 @@ function App() {
               </div>
               <div className="mockup-body">
                 <p className="label">입금 알림</p>
-                <p className="desc">지금융 파트너스 수수료 입금</p>
+                <p className="desc">지금융CS파트너스 수수료 입금</p>
                 <p className="amount">+1,500,000원</p>
                 <p className="sub">입금 완료</p>
               </div>
@@ -320,9 +320,9 @@ function App() {
         </div>
       </section>
 
-      {/* 🔹 지금융 파트너스의 세 가지 혜택 섹션 */}
+      {/* 🔹 지금융CS파트너스의 세 가지 혜택 섹션 */}
       <section className="benefits">
-        <h2>지금융 파트너스의 세 가지 혜택</h2>
+        <h2>지금융CS파트너스의 세 가지 혜택</h2>
 
         <div className="benefit-cards">
           <div className="benefit-card">
@@ -506,11 +506,11 @@ function App() {
         <div className="footer-left">
           <div className="footer-logo">
             <span className="logo-icon">지</span>
-            <span className="logo-text">지금융 파트너스</span>
+            <span className="logo-text">지금융CS파트너스</span>
           </div>
           <p>
             내가 관리하는 보험이 내가 만드는 수익이 됩니다. <br />
-            지금융 파트너스와 함께 새로운 부업을 시작하세요.
+            지금융CS파트너스와 함께 새로운 부업을 시작하세요.
           </p>
         </div>
 
@@ -524,7 +524,7 @@ function App() {
 
       {/* 하단 바 */}
       <div className="footer-bottom">
-        <p>© 2024 지금융 파트너스. All rights reserved.</p>
+        <p>© 2024 지금융CS파트너스. All rights reserved.</p>
         <div className="footer-links">
           <a href="#">개인정보처리방침</a>
           <a href="#">이용약관</a>
