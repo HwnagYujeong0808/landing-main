@@ -517,7 +517,7 @@ function App() {
         {/* 오른쪽 영역 */}
         <div className="footer-right">
           <h4>문의하기</h4>
-          <p>카카오톡: <span>@지금융파트너스</span></p>
+          <p>카카오톡: <span>@지금융CS파트너스</span></p>
           <p>이메일: <span>kssaint@daum.net</span></p>
         </div>
       </div>
